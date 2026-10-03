@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Personal website of Your Name — full-stack engineer building useful software."
+  />
+  <title>Your Name — Full-Stack Engineer</title>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #141b33;
+      --text: #edf2ff;
+      --muted: #aeb9d6;
+      --accent: #7c9cff;
+      --accent-2: #60e2c2;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(124, 156, 255, 0.18), transparent 30rem),
+        radial-gradient(circle at left 35%, rgba(96, 226, 194, 0.1), transparent 24rem),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      align-content: center;
+      max-width: 760px;
+      padding: 5rem 0;
+    }
+
+    .eyebrow {
+      color: var(--accent-2);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 1rem 0;
+      font-size: clamp(2.6rem, 8vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.2rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.78rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: 0.65rem;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      color: #0b1020;
+      background: var(--accent);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      padding: 1.35rem;
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      background: rgba(20, 27, 51, 0.72);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 560px) {
+      .nav-links {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="/">Your Name</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="https://github.com/yourusername">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <span class="eyebrow">Full-stack engineer</span>
+      <h1>I build practical software and AI-enabled products.</h1>
+      <p>
+        I design and ship useful web experiences—from polished interfaces to
+        reliable cloud-backed applications and small product experiments.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="#projects">View projects</a>
+        <a class="button" href="mailto:you@example.com">Contact me</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-copy">
+          I’m a Bay Area full-stack engineer focused on building clear,
+          dependable products. I enjoy working across frontend development,
+          cloud systems, developer tools, and AI-assisted workflows.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Selected work</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>AI product experiments</h3>
+            <p>
+              Small, focused tools that turn repetitive workflows into simple,
+              useful experiences.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Web applications</h3>
+            <p>
+              End-to-end applications built with an emphasis on usability,
+              maintainability, and performance.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Developer tooling</h3>
+            <p>
+              Practical internal tools and automations that help teams move
+              faster and make better decisions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Your Name. Built with HTML and hosted on GitHub Pages.
+    </div>
+  </footer>
+</body>
+</html>
