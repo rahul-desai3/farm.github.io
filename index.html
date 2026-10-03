@@ -154,6 +154,29 @@
       backdrop-filter: blur(2px);
     }
   </style>
+  <script>
+    document.getElementById("contact-button").addEventListener("click", function () {
+      const name = "contact.rhizome.co";
+      const domain = "gmail.com";
+      const email = name + "@" + domain;
+  
+      const subject = "Farm inquiry";
+      const body =
+        "Hello,\n\n" +
+        "I would like to ask about:\n\n" +
+        "Name:\n" +
+        "Phone (optional):\n\n" +
+        "Thank you.";
+  
+      window.location.href =
+        "mailto:" +
+        email +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+    });
+  </script>
 </head>
 
 <body>
@@ -177,7 +200,9 @@
         our community, and every season.
       </p>
 
-      <a class="button" href="mailto:hello@example.com">Get in touch</a>
+      <button class="button" id="contact-button" type="button">
+        Get in touch
+      </button>
     </section>
 
     <footer>
