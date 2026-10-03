@@ -154,40 +154,12 @@
       backdrop-filter: blur(2px);
     }
   </style>
-  <script>
-    document.getElementById("contact-button").addEventListener("click", function () {
-      const name = "contact.rhizome.co";
-      const domain = "gmail.com";
-      const email = name + "@" + domain;
-  
-      const subject = "Farm inquiry";
-      const body =
-        "Hello,\n\n" +
-        "I would like to ask about:\n\n" +
-        "Name:\n" +
-        "Phone (optional):\n\n" +
-        "Thank you.";
-  
-      window.location.href =
-        "mailto:" +
-        email +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-    });
-  </script>
 </head>
 
 <body>
   <main class="hero">
     <header>
       <a class="logo" href="#">Rhizome Farm</a>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
-      </nav>
     </header>
 
     <section class="content" id="about">
@@ -209,5 +181,32 @@
       © 2026 Rhizome Farm · Fresh, local, and naturally grown.
     </footer>
   </main>
+  <script>
+    const contactButton = document.getElementById("contact-button");
+  
+    if (contactButton) {
+      contactButton.addEventListener("click", function () {
+        const name = "contact.rhizome.co";
+        const domain = "gmail.com";
+        const email = name + "@" + domain;
+  
+        const subject = "Inquiry for Rhizome Farm";
+        const body =
+          "Hello,\n\n" +
+          "I would like to ask about:\n\n" +
+          "Name:\n" +
+          "Phone (optional):\n\n" +
+          "Thank you.";
+  
+        window.location.href =
+          "mailto:" +
+          email +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    }
+  </script>
 </body>
 </html>
